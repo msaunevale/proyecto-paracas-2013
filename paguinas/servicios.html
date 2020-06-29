@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="created" content="mar, 18 jun 2013 20:13:19 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Servicios Turisticos</title>
+    <link rel="stylesheet" type="text/css" href="../css/menu.css" />
+
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css" />
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
+    <script src='funciones.js'></script>
+	
+	<script>
+	$(document).ready(function () {
+    var emailreg = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+    $(".boton").click(function (){
+        $(".error").remove();
+        if( $(".nombre").val() == "" ){
+            $(".nombre").focus().after("<span class='error'>Ingrese su nombre</span>");
+            return false;
+        }else if( $(".email").val() == "" || !emailreg.test($(".email").val()) ){
+            $(".email").focus().after("<span class='error'>Ingrese un email correcto</span>");
+            return false;
+        }else if( $(".asunto").val() == ""){
+            $(".asunto").focus().after("<span class='error'>Ingrese un asunto</span>");
+            return false;
+        }else if( $(".mensaje").val() == "" ){
+            $(".mensaje").focus().after("<span class='error'>Ingrese un mensaje</span>");
+            return false;
+        }
+    });
+    $(".nombre, .asunto, .mensaje").keyup(function(){
+        if( $(this).val() != "" ){
+            $(".error").fadeOut();
+            return false;
+        }
+    });
+    $(".email").keyup(function(){
+        if( $(this).val() != "" && emailreg.test($(this).val())){
+            $(".error").fadeOut();
+            return false;
+        }
+    });
+});
+	
+	</script>
+	
+			   <script>
+				   		   	function suma(n1,n2){
+							  		 var r;
+									 r=parseInt(n1)+ parseInt(n2);
+									 document.form1.txtresultado.value=r;
+  							  		}
+							function resta(n1,n2){
+									 var r;
+									 r=parseFloat(n1)-parseFloat(n2);
+									 document.form1.txtresultado.value=r;
+									 }
+							function producto(n1,n2){
+									 var r;
+									 r=parseFloat(n1)*parseFloat(n2);
+									 document.form1.txtresultado.value=r;
+							
+							}
+  				   </script>
+
+	
+  </head>
+  <center>
+  <body>
+     <body style="background-color:#325899;">
+     
+	 <div id="contenedor">
+        
+	     <div id="logotipo" >
+	           <img style="height:130px" src="../imagenes/banner3.png" />
+	
+	
+	     </div>
+		   
+          <div id='cssmenu'>
+           <ul>
+              <li class='active'><a href='../index.html'style="width:110px;"><span>Home</span></a></li>
+              <li class='has-sub'><a href='#'style="width:160px;"><span>Atractivos Turisticos</span></a>
+                 <ul>
+                    <li><a href='IslasBallestas.html'style="width:160px;"><span>Islas Ballestas</span></a></li>
+                    <li class='last'><a href='ReservaParacas.html'style="width:160px;"><span>Reserva Nacional de Paracas</span></a></li>
+                </ul>
+             </li>
+             <li><a href='servicios.html'style="width:140px;background-color:#00c4ee;"><span>Servicios Turisticos</span></a></li>
+             <li><a href='cultura.html'style="width:165px;"><span>Cultura Paracas</span></a></li>
+             <li class='last'><a href='actividad1.html'style="width:170px;"><span>Actividad Economica</span></a></li>
+           </ul>
+        </div>
+	
+	   
+          <div style="height:1400px" ; id="cuerpo">
+		      <br />
+		     <h1 style="padding-left:5px"><font face="arial" size="6px">Hoteles en Paracas</font></h1>
+             
+			 <p><font face="arial" size="3px">En la ciudad de Paracas existen variedad de hostales y hoteles de distintos precios.</font></p>
+				  <div id="hotel1">
+		   
+		   
+		   
+		   <iframe width="380" height="240" src="http://www.youtube.com/embed/AaXuoW65RxU?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+		   <br />
+		   <br />
+		   <h3>Santa Maria Hostal Residencias </h3>
+		   <p>El hostal se encuentra a unos pasos del malecon del Chaco en Paracas. Tiene al costado el excelente restaurante El Chorito, un de los mejores restaurantes en Paracas. Venta de tours a las Islas Ballestas y Reserva. Recojo del estacion terrestre en sand buggy a pedido.</p>
+		   <p> <strong>Correo electrónico: reservas_santamaria@hotmail.com</strong><br />
+                    Página web www.hostalsantamariaparacas.com<br />
+                    Teléfonos:<br />
+                    - 01 56 545045 <br />
+                    - 01 56775799 <br />
+                    - 140*6361<br />
+                    - 981406361<br />
+Dirección: frente a la plaza principal de Paracas al lado del Restaurante El Chorito</p>
+		   
+		   <div id="Cálculo de Venta">
+		   		  	<form name="form1">
+		
+  				<table>
+			   		    <tr> 
+			   		    <td colspan="3"><h2> Cálculo de Ventas </h2></td>
+			  		     </tr>
+			   			 <td>Precio S/. </td>
+						 <td><input type="text" id="txtn1" /></td>
+						 <td><input type="button" id="btnSuma" 
+						 value="Suma" onClick="suma(txtn1.value, txtn2.value)" /></td>
+			  			 <tr>
+			   	 		 <td>Cantidad</td>
+				  		 <td><input type="text" id="txtn2" /></td>
+				  		 <td><input type="button" id="btnResta"
+				  		 value="Resta" onClick="resta(txtn1.value, txtn2.value)" /></td>
+			  		     </tr>
+			   	  	     <td>Resultado</td>
+				  		 <td><input type="text" id="txtresultado" /></td>
+				  		 <td><input type="button" id="btnProducto" 
+				  		 value="Producto" onClick="producto(txtn1.value, txtn2.value)"/></td>
+			  
+			  	</table>
+		
+		</form>
+
+		   
+		   
+		   </div>
+		   
+		       </div>
+			   
+			   <div id="hotel1">
+		   
+		   
+		   
+		   <iframe width="380" height="240" src="http://www.youtube.com/embed/KIybe3QVLTI?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+		   <br />
+		   <br />
+		   <h3>Hotel Paracas, a Luxury Collection Resort</h3>
+		   <p>El Hotel Paracas, a Luxury Collection Resort, es el lugar perfecto para descansar en la costa peruana. Desde Lima se puede llegar por tierra, viajando 3 horas, o en un vuelo de tan solo 50 minutos en avión privado operado por T'ikariy.<br />El hotel está ubicado frente a la Reserva Nacional de Paracas, donde se puede admirar la gran diversidad de vida marina (lobos de mar, flamencos, delfines, pingüinos) y donde hace más de dos millones de años nació la cultura Paracas.<br />
+
+Además de sus 120 amplias y acogedoras habitaciones, el hotel cuenta con dos piscinas, un salón para eventos y un spa de 547 m2.<br /> El restaurante ofrece una experiencia gastronómica completa con platos mediterráneos y peruanos inspirados en el mar del Pacífico</p>
+		   <p><strong>Dirección: Av. Paracas 173, Paracas</strong><br />
+                   
+		   <form class='contacto'>
+            <div><label>Tu Nombre:</label><input type='text' value=''></div>
+            <div><label>Tu Email:</label><input type='text' value=''></div>
+            <div><label>Asunto:</label><input type='text' value=''></div>
+            <div><label>Mensaje:</label><textarea rows='6'></textarea></div>
+            <div><input type='submit' value='Envia Mensaje'></div>
+           </form>
+   
+		   
+  </div>
+			   
+			   
+			   
+			    		   
+	    </div>
+    <div id="pie">
+	      <p>Paracas.com, Mostrando al Mundo Nuestra Imagen<br />
+       Copyright 2006 - 2013 - Derechos reservados<br />
+       E-mail: admin@paracas.com<br />
+       </p>
+	   <audio controls="controls" autoplay="autoplay" volumechange="1">
+    <source src="../musica/OneLove.mp3" type="audio/mpeg">
+    </audio>
+	   
+	   
+	
+	</div>
+	
+	
+  </div>
+  </body>
+</html>
